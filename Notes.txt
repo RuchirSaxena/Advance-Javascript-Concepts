@@ -1,0 +1,130 @@
+
+=>Primitives Data types
+========================
+1.Numbers
+2.Strings
+3.Boolean
+4.Undefined
+5.Null
+
+=>Everything else.... 
+1.Arrays
+2.Functions
+3.Objects
+4.Dates
+5.Wrappers for Numbers , Strings ,Boolean
+
+....Is an Object
+
+=>Object Oriented Programming
+================================
+Objects intrecting with one another through methods and properties.
+Used to store data , structure applications into modules and keeping code clean.
+
+
+Prototypal Inheritance in Javascript (Refer PrototyeAndProtoyupechain.PNG)
+=====================================
+1.Every Javascript Object has a prototype property , which makes Inheritance possible in Javascript.
+2.The prototype of an object is where we put methods and properties that we want other Objects to inherit.
+3.The Constructor's prototype property is NOT the prototype of the Constructor itsellf , it's the prortotype of ALL instances that are created through it .
+4.When a certain method (or prototype) is called , the search stars in the object itsellf and if it cannot be found , the search moves on the Object's prortotype. This continues until the method is found in prortotype chain , if not found than it will return Null.
+
+How code runs in Javascript
+============================
+In Javascript firstly the code is parsed to check to check wheather there are any syntax error or not ,then the code is converted into machine lanaguage which computer finally understands and executes.
+
+Javascript Code =====>parsed to check syntax errors =====> converted into machine lanaguage
+
+How the execution context are created in Javascript?
+===================================================
+There are basically 2 types of execution context in Javascript =>
+1.Global execution context
+2.Current execution context
+
+Global execution context is firstly created for all the variables and Functions that are defined .
+
+Current execution context is created when a function is called and all the code inside that function runs in its own execution context
+
+eg:
+
+var a= 10;
+
+function hello(){
+    return "hello";
+}
+
+hello();
+
+In above example , var a =10 and hello() comes in the Global execution context and Local execution context will be created When the hello() function will be called so , return "hello" comes in the Local execution context.
+
+Execution Context 
+==================
+When a function is called a new execution context is created which contains 2 phases:
+A.Creation phase:
+    1.Creation of the Variable Object(VO).=>Argument ,Inner variable declaration as well as function declaration.
+    2.Creation of the scope chain =>Current variable object as well as variable object of all its parents
+    3.Determine value of 'this' variable
+
+B.Execution phase:
+    The code in the function that generated the Current execution context is ran line by line
+
+Scooping in Javascript
+======================
+Scooping answers the question "where can we access a certain variable ?"
+ie.Each function creates a scope : the space/enviroment in which the variables it defines are accessible.
+
+Lexical Scoping(Scope Chain) :a function that is lexically within another function gets access to the scope of the outer function.(refer img =>LexicalScope.PNG and ExecutionStackVvScopeChain.PNG in the solution)
+
+THIS Keyword
+=============
+1.Regular function call :The 'this' Keyword points at the Global Object (the window object in the browser).
+2.Method call:The 'this' variable points to the object that is calling the method.
+
+Note: The this Keyword is not assigned a value until a function where it is defined is actually called.
+
+
+Functions (First Class)
+============
+A function is an instance of the object type.
+A function behaves like any other object.
+We can store functions in a variable.
+We can pass a function as an Argument to another function.
+We can return a function form a function.
+
+Because of above reasons functions are called as First Class.
+
+IIFE =>Immidieatly Invoked Function Expression
+=================================================
+1.IIFE can only be called once 
+2.IIFE is not used to create a reusable code ,it creates a new scope which is hidden from outside scope
+3.It helps us in creation of data privacy and also dont interfer with other variables and dont conflict with our
+global execution context , so if that is our goal than we should use IIFE
+4.It helps in achiveing data modularity.
+
+
+Closures
+==========
+An inner function has always access to the variables and parameters of its outer function, even after the outer 
+function has returned.   
+ie.In closure inside function has access to outside fuction parameters and variables
+It helps us in creating more generic function ,
+which can help us to divide a complex logic into multiple parts.
+(Refer img => Closures.PNG) for understanding how Closures work.
+
+Bind ,call ,apply
+==================
+Till now we know that Functions are special kind of Objects and similar to array object functions also get some special methods which they inherit from function Constructor object like __proto__ (it contains further methods like hasOwnProperty(),isPrototypeOf() etc...), Constructor  similar to that of Javascript object.
+
+Now Bind ,call and apply helps us to set  the value of this variable manually.
+
+Callbacks
+==========
+
+
+
+
+
+
+
+
+
