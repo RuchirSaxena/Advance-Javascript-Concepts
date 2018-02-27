@@ -1,14 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <!-- <script src="functionExpression.js"></script> -->
-    <script src="quizCodingChallenge.js"></script>
+    <!-- <script src="quizCodingChallenge.js"></script> -->
+   
+    <style>
+        #parent{
+            height: 200px;
+            border: 1px solid red;
+            width: 400px;
+        }
+        .button{
+            padding: 13px;
+            border: 1px solid  red;
+        }
+        #child,#other{
+            padding:10px 10px 10px 10px;
+            margin: 10px 0px 0px 0px;
+
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Quiz Challenge</h1>
+    <div id="main">
+        <div id="parent" class="button">
+            <div id="child" class="button">
+                child
+             
+            </div>
+            <div id="other" class="button">
+                other
+            </div>
+        </div>
+    </div>
+    <script src="eventBubbling.js"></script>
 </body>
+
 </html>
