@@ -130,6 +130,10 @@ So if there are nested elements then the senario of event Bubbling and Capturing
 By default event bubbling is enabled and for event capturing we have to pass an addition parameter to a addevntlistner ie.true
 see img EventBubblingandcapturing.PNG
 
+Modules (ES6)
+============
+
+
 
 
 
