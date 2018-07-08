@@ -132,7 +132,12 @@ see img EventBubblingandcapturing.PNG
 
 Modules (ES6)
 ============
+In Modular Programming we can create the different modules in Javascript and can import the modules as per the requirement.
 
+
+Prototypal Inheritance in Javascript
+========================================
+In Prototypal Inheritance the object 
 
 
 
